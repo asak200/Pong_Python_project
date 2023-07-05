@@ -1,5 +1,5 @@
 from turtle import Screen, Turtle
-HARDNESS = 3
+HARDNESS = 5
 
 screen = Screen()
 
