@@ -1,5 +1,5 @@
 from turtle import Screen, Turtle
-DIFFICULTY = 5
+DIFFICULTY = 3
 
 screen = Screen()
 
@@ -17,10 +17,10 @@ class BotPaddle:
         self.paddle.goto(350, 00)
 
     def defend(self, ball_pos, moves):
-        if 190 > self.paddle.ycor() > -190 and moves % DIFFICULTY == 0:
-            if ball_pos > self.paddle.ycor()+20:
+        if moves % DIFFICULTY == 0:
+            if ball_pos > self.paddle.ycor()+20 and 200 > self.paddle.ycor():
                 self.paddle.sety(self.paddle.ycor()+20)
-            elif ball_pos < self.paddle.ycor()-20:
+            elif ball_pos < self.paddle.ycor()-20 and self.paddle.ycor() > -200:
                 self.paddle.sety(self.paddle.ycor()-20)
 
 
